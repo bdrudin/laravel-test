@@ -32,4 +32,9 @@ class CustomerContoller extends Controller
             ->get();
         return response()->json($data);
     }
+
+    public function showData()
+    {
+        return view('customer.customer');
+    }
 }

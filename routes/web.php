@@ -29,3 +29,4 @@ Route::get('/test3', function () {
 // customer routes
 Route::get('/customer', [CustomerContoller::class, 'index']);
 Route::get('/get-data', [CustomerContoller::class, 'show']);
+Route::get('/ajax-test', [CustomerContoller::class, 'showData']);
