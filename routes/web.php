@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CustomerContoller;
+use App\Http\Controllers\CustomerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,7 @@ use App\Http\Controllers\CustomerContoller;
 |
 */
 
+// home welcome
 Route::get('/', function () {
     return view('index');
 });
@@ -26,7 +27,6 @@ Route::get('/test3', function () {
     return view('test-case-3');
 });
 
-// customer routes
-Route::get('/customer', [CustomerContoller::class, 'index']);
-Route::get('/get-data', [CustomerContoller::class, 'show']);
-Route::get('/ajax-test', [CustomerContoller::class, 'showData']);
+// customer
+Route::get('/customer', [CustomerController::class, 'show']);
+Route::get('/ajax-test', [CustomerController::class, 'showData']);

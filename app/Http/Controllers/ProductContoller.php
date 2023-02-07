@@ -16,6 +16,6 @@ class ProductContoller extends Controller
             'name' => 'Taylor',
         ])->get('/products');
 
-        return $response;
+        return response()->json($response);
     }
 }
